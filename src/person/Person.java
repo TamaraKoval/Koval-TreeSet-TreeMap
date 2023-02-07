@@ -1,6 +1,6 @@
 package person;
 
-public class Person {
+public class Person implements Comparable<Person>{
     private String name;
     private String surname;
     private int age;
@@ -11,8 +11,21 @@ public class Person {
         this.age = age;
     }
 
+    public String getSurname() {
+        return surname;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
     @Override
     public String toString() {
         return name + " " + surname + ": " + age;
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return Integer.compare(age, o.age);
     }
 }
