@@ -19,7 +19,5 @@ public class Main {
 
         Collections.sort(noblePeople, new PersonGrandeurComparator(3)); // сортируем список, значимое количество - 3
         System.out.println(noblePeople); // все работает корректно
-
     }
-
 }
